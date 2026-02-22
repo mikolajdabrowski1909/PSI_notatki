@@ -1,0 +1,29 @@
+#Zadanie 4.	 Kalkulator matematyczny
+#Scenariusz: Tworzysz najprostszą wersję kalkulatora dla aplikacji finansowej.
+#Stwórz funkcję kalkulator(a, b, operacja)
+#Zaplanuj operacje: "+", "-", "*", "/"  - użyj dla nich wyrażeń warunkowych.
+#Dodaj obsługę dzielenia przez zero: kalkulator ma wtedy wypisać "Błąd: dzielenie przez zero!"
+#Dodaj obsługę innej operacji niż przewidziane: kalkulator ma wtedy wypisać "Nieznana operacja"
+
+
+kalkulator = function(a, b, operacja){
+  wynik=0
+  if(operacja=="+"){
+    wynik=a+b
+  }else if(operacja=="-"){
+    wynik=a-b
+  }else if(operacja=="*"){
+    wynik=a*b
+  }else if(operacja=="/"){
+    if(b==0){
+      return("Błąd: dzielenie przez zero!")
+    }else {
+      wynik=a/b
+    }
+  }else {
+    return("Nieznana operacja")
+  }
+
+  return(wynik)
+}
+  
